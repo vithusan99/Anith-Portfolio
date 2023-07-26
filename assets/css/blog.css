@@ -1,0 +1,248 @@
+/* login form 0 */
+:root {
+    --primary: #007fff;
+    --secondary: #6f7e8c;
+    --box: #f5f5f5;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0 16px;
+    background: var(--primary);
+}
+
+.centering h3 {
+    margin: auto;
+}
+
+.search-box {
+    background-color: var(--box);
+    max-width: 400px;
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    padding: 16px;
+    place-items: center;
+    border-radius: 24px;
+}
+
+.login-box {
+    background-color: var(--box);
+    max-width: 400px;
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    padding: 16px;
+    place-items: center;
+    border-radius: 24px;
+    position: relative;
+}
+
+.login-box .square {
+    position: absolute;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    animation-delay: calc(-1s*.2s);
+    animation: animate 10s linear infinite;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.login-box .square:nth-child(1) {
+    top: -50px;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.login-box .square:nth-child(2) {
+    z-index: 2;
+    top: 150px;
+    left: 100px;
+    width: 120px;
+    height: 120px;
+}
+
+.box {
+    /* background-color: var(--box); */
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    padding: 16px;
+    /* place-items: center; */
+    /* border-radius: 24px; */
+}
+
+.search {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 40px;
+    padding: 10px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    font-size: 24px;
+    color: transparent;
+    border: 3px solid var(--primary);
+    transition: width 300ms, background-postion 300ms;
+    overflow: hidden;
+    background: url(search-bold.svg) no-repeat transparent;
+    background-size: 40px;
+    background-position: 45% 50%;
+}
+
+.search:hover {
+    cursor: pointer;
+    border: 3px solid var(--primary);
+    background: url(search-bold.svg) no-repeat transparent;
+    background-size: 40px;
+    background-position: 45% 50%;
+}
+
+.search:focus,
+.search:not(:placeholder-shown) {
+    max-width: 300px;
+    width: 100%;
+    color: var(--primary);
+    padding-left: 60px;
+    outline: none;
+    transition: width 500ms, background-position 300ms;
+    cursor: text;
+    border: 3px solid var(--primary);
+    background-color: transparent;
+    background: url(search-bold.svg) no-repeat transparent;
+    background-size: 40px;
+    background-position: 10% 50%;
+}
+
+.login-form {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f7f7fe, #dff1ff);
+}
+
+.login-form .colour {
+    position: absolute;
+    filter: blur(150px);
+}
+
+.login-form .colour:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #bf4ad4;
+}
+
+.login-form .colour:nth-child(2) {
+    left: -100px;
+    bottom: -150px;
+    width: 500px;
+    height: 500px;
+    background: #ffa500;
+}
+
+.login-form .colour:nth-child(3) {
+    /* right: -100px; */
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    background: #2b67f3;
+}
+
+/* Image */
+
+.cap-img img {
+    height: 650px;
+    object-fit: cover;
+}
+
+.side-img img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.image {
+    border-radius: 0.25em;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.image img {
+    border-radius: 0.25em;
+    display: block;
+}
+
+.image.left,
+.image.right {
+    max-width: 40%;
+}
+
+.image.left img,
+.image.right img {
+    object-fit: cover;
+}
+
+.image.left {
+    /* float: left; */
+    margin: 0 1.5em 1em 0;
+    top: 0.25em;
+}
+
+.image.right {
+    /* float: right; */
+    margin: 0 0 1em 1.5em;
+    top: 0.25em;
+}
+
+.image.fit {
+    display: block;
+    margin: 0 0 2em 0;
+    width: 100%;
+}
+
+.image.fit img {
+    width: 100%;
+}
+
+.image.main {
+    display: block;
+    margin: 0 0 3em 0;
+    width: 100%;
+}
+
+.image.main img {
+    width: 100%;
+}
+
+.writing img {
+    width: 300px;
+    height: 300px;
+}
+.writing p{
+    display: flex;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(40px);
+    }
+}
