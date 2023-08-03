@@ -1,18 +1,151 @@
-/* login form 0 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap');
 :root {
     --primary: #007fff;
     --secondary: #6f7e8c;
     --box: #f5f5f5;
 }
 
-.centering {
+/* ---------------------------------login----------------------------------------------------  */
+.signin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: url('./images/blog/login-bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.signin form{
+    margin: 0;
+}
+.signin-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signin h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.signin .input-box{
+    position: relative;
+    width: 310px;
+    margin: 20px 0;
+    border-bottom: 2px solid #fff;
+}
+.signin .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.signin .input-box input:focus~label,
+.signin .input-box input:valid~label{
+    top: -5px;
+}
+.signin .input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+.signin .input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1em;
+    line-height: 57px;
+}
+.remember{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.remember label input{
+    margin-right: 3px;
+}
+.signin input{
+    appearance: auto;
+}
+.signin a{
+    border: none;
+    text-decoration: none;
+}
+.remember a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.signin button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000 !important;
+    font-weight: 500;
+    line-height: 0;
+}
+.register-link{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register-link p a{
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------other--------------------------------------  */
+.anime-search{
+    background: var(--primary);
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+.anime-search .heading{
+    margin-top: 30px;
+}
+.centering {
+    text-align: center;
     width: 100%;
+    height: auto;
     padding: 0 16px;
-    background: var(--primary);
 }
 
 .centering h3 {
@@ -26,6 +159,7 @@
     min-height: 200px;
     display: grid;
     padding: 16px;
+    margin: auto;
     place-items: center;
     border-radius: 24px;
 }
@@ -87,6 +221,7 @@
     height: 64px;
     border-radius: 40px;
     padding: 10px;
+    padding-left: 30px;
     cursor: pointer;
     background-repeat: no-repeat;
     font-size: 24px;
@@ -94,15 +229,15 @@
     border: 3px solid var(--primary);
     transition: width 300ms, background-postion 300ms;
     overflow: hidden;
-    background: url(search-bold.svg) no-repeat transparent;
-    background-size: 40px;
-    background-position: 45% 50%;
+    background: url(love-search.svg) no-repeat transparent;
+    background-size: 35px;
+    background-position: 55% 50%;
 }
 
 .search:hover {
     cursor: pointer;
     border: 3px solid var(--primary);
-    background: url(search-bold.svg) no-repeat transparent;
+    background: url(love-search.svg) no-repeat transparent;
     background-size: 40px;
     background-position: 45% 50%;
 }
@@ -112,13 +247,13 @@
     max-width: 300px;
     width: 100%;
     color: var(--primary);
-    padding-left: 60px;
+    padding-left: 70px;
     outline: none;
     transition: width 500ms, background-position 300ms;
     cursor: text;
     border: 3px solid var(--primary);
     background-color: transparent;
-    background: url(search-bold.svg) no-repeat transparent;
+    background: url(love-search.svg) no-repeat transparent;
     background-size: 40px;
     background-position: 10% 50%;
 }
@@ -130,6 +265,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     background: linear-gradient(to bottom, #f7f7fe, #dff1ff);
 }
 
@@ -154,7 +290,7 @@
 }
 
 .login-form .colour:nth-child(3) {
-    /* right: -100px; */
+    right: -100px;
     bottom: 50px;
     width: 300px;
     height: 300px;
